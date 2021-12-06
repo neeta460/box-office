@@ -1,5 +1,6 @@
-import React, {useState} from 'react'
-import ActorGrid from '../Components/actor/ActorGrid';
+/* eslint-disable */
+import React, {useState, useEffect} from 'react'
+import  {ActorGrid} from '../Components/actor/ActorGrid';
 import MainPageLayout from '../Components/MainPageLayout'
 import ShowGrid from '../Components/show/ShowGrid';
 import { apiGet } from '../misc/config';
@@ -10,6 +11,8 @@ const Home = () => {
   const [searchOption, setSearchOption] = useState('shows');
 
   const isShowsSearch = searchOption === 'shows';
+
+  
 
   const onSearch = () => {
     apiGet(`/search/${searchOption}?q=${input}`).then(result => {
