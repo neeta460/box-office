@@ -38,4 +38,4 @@ const Seasons = ({ seasons }) => {
 };
 
 
-export default Seasons
+export default Seasons;
